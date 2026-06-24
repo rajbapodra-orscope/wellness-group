@@ -31,7 +31,7 @@ const slides = [
     eyebrow: "Genius Defined",
     headline: "Talent hits\na target no\none else can hit",
     sub: "— Arthur Schopenhauer",
-    body: "Genius hits a target no one else can see. The Wellness Group philosophy is built on seeing what others cannot — and building relentlessly toward what others haven't yet imagined.",
+    body: "The Wellness Group philosophy is built on seeing what others cannot — and building relentlessly toward what others haven't yet imagined.",
     image: "/images/story/s03.jpg",
     imageAlt: "Light bulb symbolising genius and ideas",
   },
@@ -330,10 +330,25 @@ export default function WellnessScrollStory() {
             </div>
 
             {/* Photo — desktop panel */}
-            <div className={`hidden lg:flex items-center justify-center flex-shrink-0 relative ${s.id === 1 ? "w-[520px] h-[220px]" : "w-[340px] h-[340px]"}`}>
-              <SlidePhoto image={s.image} imageAlt={s.imageAlt} textDark={s.textDark} objectFit={s.id === 1 ? "contain" : "cover"} />
-            </div>
+            {s.id === 3 ? (
+              <div className="hidden lg:flex flex-col gap-6 flex-shrink-0 w-[340px]">
+                <div className="relative w-full h-[200px] rounded-2xl overflow-hidden flex-shrink-0">
+                  <SlidePhoto image={s.image} imageAlt={s.imageAlt} textDark={s.textDark} objectFit="cover" />
+                </div>
+                <h2
+                  className="font-black tracking-tighter leading-[0.88] text-white italic whitespace-pre-line"
+                  style={{ fontSize: "clamp(2rem, 5vw, 4rem)" }}
+                >
+                  {"Genius hits\na target no\none else can see."}
+                </h2>
+              </div>
+            ) : (
+              <div className={`hidden lg:flex items-center justify-center flex-shrink-0 relative ${s.id === 1 ? "w-[520px] h-[220px]" : "w-[340px] h-[340px]"}`}>
+                <SlidePhoto image={s.image} imageAlt={s.imageAlt} textDark={s.textDark} objectFit={s.id === 1 ? "contain" : "cover"} />
+              </div>
+            )}
           </div>
+
 
           {/* Thin top progress bar showing position within the 21 slides */}
           <div
