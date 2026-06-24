@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local temp build dir (NTFS workaround — never commit)
+/tmp/
+
+# Claude Code project memory
+.claude/
