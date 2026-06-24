@@ -15,7 +15,6 @@ import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { Globe as CobeGlobe } from "@/components/ui/cobe-globe";
 import ParallaxImage from "@/components/ui/ParallaxImage";
-import ButterflyCompanion from "@/components/ui/ButterflyCompanion";
 import ImmersiveVertical from "@/components/ui/ImmersiveVertical";
 import CountUp from "@/components/ui/CountUp";
 import WellnessScrollStory from "@/components/ui/WellnessScrollStory";
@@ -282,8 +281,6 @@ export default function Home() {
   return (
     <div className="flex-1 flex flex-col bg-[#F4F4F4]">
       <Navbar />
-      <ButterflyCompanion />
-
       {/* ── Wellness Profile Scroll Story (PDF pages 2-22 as cinematic slides) ── */}
       <WellnessScrollStory />
 
@@ -683,7 +680,6 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,36,48,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,36,48,0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#168F5D]/8 rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10 flex flex-col items-center justify-center">
-          <div id="cta-butterfly-dock" className="mb-6 w-[60px] h-[60px]" />
           <AnimatedSection direction="up" className="flex flex-col items-center">
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0F2430] mb-6 leading-tight">Ready to Shape the Future of Industrial Synergy?</h2>
             <p className="text-base sm:text-lg text-[#1f2d3d] mb-10 max-w-2xl leading-relaxed">Partner with a global conglomerate driving ethical sourcing, high-performance infrastructure, and carbon-neutral resource trade.</p>

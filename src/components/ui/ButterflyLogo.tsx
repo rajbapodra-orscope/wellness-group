@@ -18,41 +18,41 @@ export default function ButterflyLogo({ className = "", size = 48 }: ButterflyLo
         className="w-full h-full drop-shadow-[0_2px_10px_rgba(15,36,48,0.25)] transition-all duration-500 group-hover:scale-105"
       >
         <defs>
-          {/* Upper wings — warm sunset gradient, like a monarch/swallowtail */}
+          {/* Upper wings — deep teal to cyan, matching the real butterfly */}
           <linearGradient id="wingTopLeft" x1="100%" y1="50%" x2="0%" y2="50%">
-            <stop offset="0%" stopColor="#FF7A45" />
-            <stop offset="55%" stopColor="#FFA94D" />
-            <stop offset="100%" stopColor="#FFD93D" />
+            <stop offset="0%" stopColor="#0ABFBC" />
+            <stop offset="55%" stopColor="#14B8B8" />
+            <stop offset="100%" stopColor="#67E8F9" />
           </linearGradient>
 
           <linearGradient id="wingTopRight" x1="0%" y1="50%" x2="100%" y2="50%">
-            <stop offset="0%" stopColor="#FF7A45" />
-            <stop offset="55%" stopColor="#FFA94D" />
-            <stop offset="100%" stopColor="#FFD93D" />
+            <stop offset="0%" stopColor="#0ABFBC" />
+            <stop offset="55%" stopColor="#14B8B8" />
+            <stop offset="100%" stopColor="#67E8F9" />
           </linearGradient>
 
-          {/* Lower wings — cool jewel-tone gradient */}
+          {/* Lower wings — darker teal to deep cyan */}
           <linearGradient id="wingBotLeft" x1="100%" y1="50%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#4D96FF" />
-            <stop offset="100%" stopColor="#9D6FFF" />
+            <stop offset="0%" stopColor="#0E8A8A" />
+            <stop offset="100%" stopColor="#0ABFBC" />
           </linearGradient>
 
           <linearGradient id="wingBotRight" x1="0%" y1="50%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#4D96FF" />
-            <stop offset="100%" stopColor="#9D6FFF" />
+            <stop offset="0%" stopColor="#0E8A8A" />
+            <stop offset="100%" stopColor="#0ABFBC" />
           </linearGradient>
 
-          {/* Body Gradient */}
+          {/* Body — black like the real butterfly body */}
           <linearGradient id="bodyGrad" x1="50%" y1="0%" x2="50%" y2="100%">
-            <stop offset="0%" stopColor="#3E5868" />
-            <stop offset="50%" stopColor="#1A1A1A" />
+            <stop offset="0%" stopColor="#0F172A" />
+            <stop offset="50%" stopColor="#0A0A0A" />
             <stop offset="100%" stopColor="#000000" />
           </linearGradient>
 
-          {/* Vein Gradient */}
+          {/* Veins — dark like the real butterfly wing veins */}
           <linearGradient id="veinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#1A1A1A" stopOpacity="0.55" />
-            <stop offset="100%" stopColor="#1A1A1A" stopOpacity="0.15" />
+            <stop offset="0%" stopColor="#0F172A" stopOpacity="0.7" />
+            <stop offset="100%" stopColor="#0F172A" stopOpacity="0.25" />
           </linearGradient>
         </defs>
 
@@ -92,7 +92,7 @@ export default function ButterflyLogo({ className = "", size = 48 }: ButterflyLo
             strokeLinecap="round"
             fill="none"
           />
-          <circle cx="62" cy="148" r="3" fill="#FFD93D" fillOpacity="0.9" />
+          <circle cx="62" cy="148" r="3" fill="#A5F3FC" fillOpacity="0.9" />
         </g>
 
         {/* Right forewing */}
@@ -131,14 +131,14 @@ export default function ButterflyLogo({ className = "", size = 48 }: ButterflyLo
             strokeLinecap="round"
             fill="none"
           />
-          <circle cx="138" cy="148" r="3" fill="#FFD93D" fillOpacity="0.9" />
+          <circle cx="138" cy="148" r="3" fill="#A5F3FC" fillOpacity="0.9" />
         </g>
 
         {/* Antennae */}
         <path d="M 98 62 Q 85 45 75 48" stroke="#1A1A1A" strokeWidth="2" fill="none" strokeLinecap="round" />
         <path d="M 102 62 Q 115 45 125 48" stroke="#1A1A1A" strokeWidth="2" fill="none" strokeLinecap="round" />
-        <circle cx="75" cy="48" r="2.5" fill="#FF7A45" />
-        <circle cx="125" cy="48" r="2.5" fill="#FF7A45" />
+        <circle cx="75" cy="48" r="2.5" fill="#0ABFBC" />
+        <circle cx="125" cy="48" r="2.5" fill="#0ABFBC" />
 
         {/* Body */}
         <rect x="97" y="65" width="6" height="70" rx="3" fill="url(#bodyGrad)" />
