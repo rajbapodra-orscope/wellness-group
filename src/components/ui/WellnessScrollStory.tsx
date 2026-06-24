@@ -614,11 +614,13 @@ export default function WellnessScrollStory() {
 
     mm.add("(prefers-reduced-motion: no-preference)", () => {
       // ── Initial states ──────────────────────────────────────────────────
+      // Incoming slides start zoomed IN (scale > 1) so the reveal feels like
+      // a camera pulling back to frame the content.
       slideRefs.current.forEach((el, i) => {
         if (!el) return;
         gsap.set(el, {
           opacity: i === 0 ? 1 : 0,
-          y:       i === 0 ? 0 : 55,
+          scale:   i === 0 ? 1 : 1.22,
           zIndex:  i + 1,
           force3D: true,
         });
@@ -631,35 +633,35 @@ export default function WellnessScrollStory() {
 
         const s = i * pct;             // slice start  (%)
         const e = (i + 1) * pct;       // slice end    (%)
-        const fadeInEnd     = s + pct * 0.22;
-        const fadeOutStart  = e - pct * 0.22;
+        const zoomInEnd    = s + pct * 0.30;   // zoom-in settle window
+        const zoomOutStart = e - pct * 0.30;   // zoom-out departure window
 
-        // Fade IN (all slides after the first)
+        // ZOOM IN — slide rushes in from large scale → natural 1:1
         if (i > 0) {
           gsap.to(el, {
             opacity: 1,
-            y: 0,
+            scale: 1,
             ease: "power2.out",
             scrollTrigger: {
               trigger: outer,
               start: `${s}% top`,
-              end:   `${fadeInEnd}% top`,
-              scrub: 1.4,
+              end:   `${zoomInEnd}% top`,
+              scrub: 1.6,
             },
           });
         }
 
-        // Fade OUT (all slides before the last)
+        // ZOOM OUT — slide shrinks away to a small scale before vanishing
         if (i < N - 1) {
           gsap.to(el, {
             opacity: 0,
-            y: -55,
+            scale: 0.72,
             ease: "power2.in",
             scrollTrigger: {
               trigger: outer,
-              start: `${fadeOutStart}% top`,
+              start: `${zoomOutStart}% top`,
               end:   `${e}% top`,
-              scrub: 1.4,
+              scrub: 1.6,
             },
           });
         }
@@ -670,7 +672,7 @@ export default function WellnessScrollStory() {
     mm.add("(prefers-reduced-motion: reduce)", () => {
       slideRefs.current.forEach((el, i) => {
         if (!el) return;
-        gsap.set(el, { opacity: i === 0 ? 1 : 0, y: 0, zIndex: i + 1 });
+        gsap.set(el, { opacity: i === 0 ? 1 : 0, scale: 1, zIndex: i + 1 });
       });
     });
   });
@@ -739,12 +741,9 @@ export default function WellnessScrollStory() {
               </div>
             </div>
 
-            {/* ── Bottom HUD ───────────────────────────────────────────── */}
-            <div
-              className={`absolute bottom-0 left-0 right-0 px-8 lg:px-20 py-6 flex items-center justify-between ${slide.textDark ? "text-[#111827]" : "text-white"}`}
-            >
-              {/* Progress dots */}
-              <div className="hidden sm:flex gap-1.5 items-center">
+            {/* ── Bottom HUD — progress dots only, centred ─────────────── */}
+            <div className="absolute bottom-0 left-0 right-0 py-6 flex items-center justify-center">
+              <div className="flex gap-1.5 items-center">
                 {slides.map((_, j) => (
                   <div
                     key={j}
@@ -755,21 +754,9 @@ export default function WellnessScrollStory() {
                       background: j === i
                         ? slide.textDark ? "rgba(0,0,0,0.55)" : "rgba(255,255,255,0.8)"
                         : slide.textDark ? "rgba(0,0,0,0.12)" : "rgba(255,255,255,0.18)",
-                      transition: "width 0.3s ease",
                     }}
                   />
                 ))}
-              </div>
-
-              {/* Right: counter + Wellness Group label */}
-              <div className="ml-auto flex items-center gap-4" style={{ opacity: 0.38 }}>
-                <span className="text-[9px] font-bold uppercase tracking-[0.3em] hidden md:block">
-                  Wellness Group
-                </span>
-                <div className="w-px h-3" style={{ background: slide.textDark ? "rgba(0,0,0,0.25)" : "rgba(255,255,255,0.25)" }} />
-                <span className="text-[10px] font-bold tabular-nums tracking-widest">
-                  {String(i + 1).padStart(2, "0")}&nbsp;/&nbsp;{String(slides.length).padStart(2, "0")}
-                </span>
               </div>
             </div>
 
