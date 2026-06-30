@@ -5,15 +5,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import ButterflyLogo from "@/components/ui/ButterflyLogo";
-import { Mail, Phone, MapPin, Send, CheckCircle2, ShieldCheck, Building } from "lucide-react";
+import { Send, CheckCircle2, ShieldCheck } from "lucide-react";
 import ParallaxImage from "@/components/ui/ParallaxImage";
 
-const offices = [
-  { city: "London Corporate Head Office", address: "One Canada Square, Canary Wharf, London, E14 5AB, United Kingdom", phone: "+44 (0) 20 7516 4000", email: "london.office@wellnessgroup.com", coords: "51.5049° N, 0.0195° W" },
-  { city: "Dubai Commodities & Trade Hub", address: "Almas Tower, Jumeirah Lakes Towers, Dubai, United Arab Emirates", phone: "+971 (0) 4 345 6789", email: "dubai.desk@wellnessgroup.com", coords: "25.0772° N, 55.1432° E" },
-  { city: "Singapore Asia-Pacific Desk", address: "Marina Bay Financial Centre, 10 Marina Blvd, Singapore 018983", phone: "+65 6808 1234", email: "singapore.desk@wellnessgroup.com", coords: "1.2789° N, 103.8544° E" },
-  { city: "Johannesburg Mining Operations", address: "West Street, Sandown, Sandton, 2196, Johannesburg, South Africa", phone: "+27 (0) 11 884 1000", email: "africa.ops@wellnessgroup.com", coords: "26.1044° S, 28.0578° E" },
-];
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", company: "", department: "Minerals & Trade", message: "" });
@@ -56,49 +50,10 @@ export default function Contact() {
       </section>
 
       <section className="py-20 bg-[#F4F4F4]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-
-            {/* Offices */}
-            <div className="lg:col-span-5 space-y-8">
-              <AnimatedSection direction="right" className="space-y-4">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#3E5868]">Corporate Inquiries</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#0F2430]">Our Global Offices</h2>
-                <p className="text-sm text-[#3E5868] leading-relaxed">
-                  Wellness Group manages operations through strategic hubs positioned at core financial and commodity distribution vectors.
-                </p>
-              </AnimatedSection>
-
-              <div className="space-y-5">
-                {offices.map((office, idx) => (
-                  <AnimatedSection key={idx} direction="up" delay={idx * 0.08}
-                    className="p-5 rounded-2xl bg-white border border-[#E2E5E8] hover:border-[#3E5868] hover:shadow-md transition-all flex gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#F4F4F4] border border-[#E2E5E8] flex items-center justify-center text-[#0F2430] flex-shrink-0">
-                      <Building className="w-5 h-5" />
-                    </div>
-                    <div className="space-y-1.5 flex-1">
-                      <h4 className="text-sm font-bold text-[#0F2430] flex items-center justify-between">
-                        <span>{office.city}</span>
-                        <span className="text-[9px] text-[#3E5868] font-mono">{office.coords}</span>
-                      </h4>
-                      <p className="text-xs text-[#3E5868] leading-relaxed">{office.address}</p>
-                      <div className="flex flex-wrap gap-x-5 gap-y-1 text-xs text-[#3E5868] border-t border-[#E2E5E8] pt-2 mt-2">
-                        <a href={`tel:${office.phone.replace(/[^0-9+]/g, "")}`} className="flex items-center gap-1.5 hover:text-[#0F2430] transition-colors">
-                          <Phone className="w-3.5 h-3.5 text-[#3E5868]" />{office.phone}
-                        </a>
-                        <a href={`mailto:${office.email}`} className="flex items-center gap-1.5 hover:text-[#0F2430] transition-colors">
-                          <Mail className="w-3.5 h-3.5 text-[#3E5868]" />{office.email}
-                        </a>
-                      </div>
-                    </div>
-                  </AnimatedSection>
-                ))}
-              </div>
-            </div>
-
-            {/* Form */}
-            <div className="lg:col-span-7">
-              <AnimatedSection direction="left" className="bg-white p-6 sm:p-10 rounded-3xl border border-[#E2E5E8] shadow-sm shadow-[#0F2430]/5">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+          {/* Form */}
+          <div>
+              <AnimatedSection direction="up" className="bg-white p-6 sm:p-10 rounded-3xl border border-[#E2E5E8] shadow-sm shadow-[#0F2430]/5">
                 {submitted ? (
                   <div className="py-12 text-center space-y-6 flex flex-col items-center">
                     <CheckCircle2 className="w-16 h-16 text-[#168F5D] animate-bounce" />
@@ -165,7 +120,6 @@ export default function Contact() {
                   </form>
                 )}
               </AnimatedSection>
-            </div>
           </div>
         </div>
       </section>

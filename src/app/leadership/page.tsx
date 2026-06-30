@@ -58,7 +58,7 @@ export default function Leadership() {
               <div className="h-px bg-white/20" />
               <div className="flex items-center justify-between">
                 <div>
-                  <h4 className="text-sm font-bold text-white">Dr. Vikram Seth</h4>
+                  <h4 className="text-sm font-bold text-white">Gunendra Mehta</h4>
                   <span className="text-xs text-[#E2E5E8]">Group Executive Chairman</span>
                 </div>
                 <ButterflyLogo size={40} className="opacity-40" />

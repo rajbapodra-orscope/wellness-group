@@ -21,23 +21,6 @@ const companyLinks = [
   { name: "Careers & Talent", href: "/careers" },
 ];
 
-const officeLocations = [
-  {
-    city: "London Head Office",
-    address: "One Canada Square, Canary Wharf, London, E14 5AB, UK",
-    phone: "+44 (0) 20 7516 4000",
-  },
-  {
-    city: "Dubai Commodities Hub",
-    address: "Almas Tower, Jumeirah Lakes Towers, Dubai, UAE",
-    phone: "+971 (0) 4 345 6789",
-  },
-  {
-    city: "Singapore Trade Office",
-    address: "Marina Bay Financial Centre, 10 Marina Blvd, Singapore 018983",
-    phone: "+65 6808 1234",
-  },
-];
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -155,31 +138,12 @@ export default function Footer() {
                   <MapPin className="w-3.5 h-3.5 text-[#3E5868]" />
                 </div>
                 <div>
-                  <span className="font-semibold text-[#0F2430] text-xs block">Wellness Group HQ</span>
-                  <p className="text-xs mt-0.5 leading-relaxed">One Canada Square, Canary Wharf, London, UK</p>
+                  <span className="font-semibold text-[#0F2430] text-xs block">Wellness Group Headquarters</span>
+                  <p className="text-xs mt-0.5 leading-relaxed">DCR,London,New York,Dubai,Singapore,Perth,Santiago,India,China</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="h-px bg-[#E2E5E8] my-8" />
-
-        {/* Office Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          {officeLocations.map((loc) => (
-            <div
-              key={loc.city}
-              className="p-4 rounded-xl bg-[#F5F5F5] border border-[#E2E5E8] hover:border-[#0F2430]/20 hover:bg-white transition-all duration-300"
-            >
-              <h5 className="text-xs font-bold uppercase tracking-widest text-[#0F2430] mb-1.5 flex items-center justify-between">
-                <span>{loc.city}</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#168F5D] animate-pulse" />
-              </h5>
-              <p className="text-xs text-[#3E5868] leading-relaxed mb-1.5">{loc.address}</p>
-              <p className="text-xs font-medium text-[#0F2430]">{loc.phone}</p>
-            </div>
-          ))}
         </div>
 
         <div className="h-px bg-[#E2E5E8] my-6" />
