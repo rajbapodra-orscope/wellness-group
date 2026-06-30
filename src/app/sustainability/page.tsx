@@ -40,9 +40,7 @@ const certifications = [
   { name: "ISO 14001", desc: "Environmental Management Systems" },
   { name: "ISO 45001", desc: "Occupational Health & Safety" },
   { name: "ISO 9001", desc: "Quality Management Systems" },
-  { name: "EcoVadis Platinum", desc: "Top 1% Global CSR Rating" },
   { name: "OECD Due Diligence", desc: "Responsible Mineral Supply Chains" },
-  { name: "LEED Gold/Platinum", desc: "Sustainable Construction Standard" },
 ];
 
 const qualityByDivision = [
@@ -66,7 +64,6 @@ const qualityByDivision = [
 const impactStats = [
   { stat: "100%", desc: "Traceability across lithium and cobalt shipments" },
   { stat: "4.8M Gal", desc: "Water reclaimed through closed-loop filtration" },
-  { stat: "£4.2M", desc: "Invested in local schools, clinics, and microgrids" },
   { stat: "18M+ Hrs", desc: "Logged in Mining & Engineering with zero major incidents" },
 ];
 
@@ -143,10 +140,10 @@ export default function Sustainability() {
               <div className="w-12 h-0.5 bg-[#168F5D] rounded-full mt-4" />
             </AnimatedSection>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
             {impactStats.map((item, idx) => (
               <AnimatedSection key={idx} direction="up" delay={idx * 0.08}
-                className="p-6 rounded-2xl bg-white border border-[#E2E5E8] text-center shadow-sm">
+                className="w-full p-6 rounded-2xl bg-white border border-[#E2E5E8] text-center shadow-sm">
                 <CountUp value={item.stat} className="text-2xl sm:text-3xl font-extrabold text-[#0F2430] block" />
                 <p className="text-xs text-[#3E5868] mt-2 leading-relaxed">{item.desc}</p>
               </AnimatedSection>

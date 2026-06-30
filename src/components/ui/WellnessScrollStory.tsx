@@ -123,7 +123,7 @@ const slides = [
     sub: "Rest is not weakness — it's strategy.",
     body: "High performance requires high recovery. The most effective leaders know when to call a time-out, reset their thinking, and return with renewed clarity, energy, and decisive perspective.",
     image: "/images/story/s12.jpg",
-    imageAlt: "Person sitting in a meditation pose outdoors",
+    imageAlt: "European man relaxing at a cafe with a cup of coffee",
   },
   {
     id: 13,

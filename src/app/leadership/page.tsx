@@ -9,10 +9,12 @@ import { Scale, ShieldAlert, Award } from "lucide-react";
 import ParallaxImage from "@/components/ui/ParallaxImage";
 
 const board = [
-  { name: "Dr. Vikram Seth", role: "Group Executive Chairman", credentials: "Ph.D. in Resource Economics, Oxford University", bio: "Dr. Seth has overseen global commodity transactions for over 30 years. Formerly a senior advisor to international energy commissions, he steers the Group's long-term asset allocations." },
-  { name: "Helena Rostova", role: "Chief Executive Officer (CEO)", credentials: "M.S. Chemical Engineering, MIT; MBA, Harvard", bio: "Helena directs all operating divisions of Wellness Group and spearheaded our pivot to battery-grade lithium refining." },
-  { name: "Sir Alistair Montgomery", role: "Non-Executive Director & Governance Lead", credentials: "Former Member of the UK High Court of Justice", bio: "Sir Alistair chairs the Compliance and Ethics Board, ensuring supply chain audits and ESG frameworks exceed LME and international standards." },
-  { name: "Marcus Aurelius Vance", role: "Chief Financial Officer (CFO)", credentials: "Former Managing Director, Global Trade Finance, HSBC", bio: "Marcus supervises group risk, accounting, and capital structure, managing our arbitrage desks and international trade lines." },
+  { name: "Gunendra Mehta", role: "Group Executive Chairman", credentials: "Ph.D. in Resource Economics, Oxford University", bio: "Dr. Seth has overseen global commodity transactions for over 30 years. Formerly a senior advisor to international energy commissions, he steers the Group's long-term asset allocations." },
+  { name: "Romi Mehta", role: "Chief Executive Officer (CEO)", credentials: "M.S. Chemical Engineering, MIT; MBA, Harvard", bio: "Helena directs all operating divisions of Wellness Group and spearheaded our pivot to battery-grade lithium refining." },
+  { name: "Aditya Pandya", role: "VP of Sourcing", bio: "Sir Alistair chairs the Compliance and Ethics Board, ensuring supply chain audits and ESG frameworks exceed LME and international standards." },
+  { name: "Lokadi Bin Russele", role: "Chief Financial Officer (CFO)", credentials: "Former Managing Director, Global Trade Finance, HSBC", bio: "Marcus supervises group risk, accounting, and capital structure, managing our arbitrage desks and international trade lines." },
+  { name: "Parmannand Nehe ", role: "Chief Technology Officer (CTO)", credentials: "Former Managing Director, Global Trade Finance, HSBC", bio: "Marcus supervises group risk, accounting, and capital structure, managing our arbitrage desks and international trade lines." },
+  { name: "Manish Sharma ", role: "Global Coordinator", credentials: "Former Managing Director, Global Trade Finance, HSBC", bio: "Marcus supervises group risk, accounting, and capital structure, managing our arbitrage desks and international trade lines." },
 ];
 
 const committee = [
@@ -99,32 +101,7 @@ export default function Leadership() {
         </div>
       </section>
 
-      <section className="py-20 bg-white border-t border-[#E2E5E8]/50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <AnimatedSection direction="up" className="flex flex-col items-center">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#3E5868]">Operations Leads</span>
-              <h2 className="text-3xl font-bold text-[#0F2430] mt-1">Executive Committee</h2>
-              <div className="w-12 h-0.5 bg-[#3E5868] rounded-full mt-4" />
-            </AnimatedSection>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {committee.map((lead, idx) => (
-              <AnimatedSection key={idx} direction="up" delay={idx * 0.08}
-                className="bg-[#F4F4F4] p-5 rounded-2xl border border-[#E2E5E8] hover:border-[#3E5868] hover:shadow-md transition-all text-center group">
-                <div className="w-12 h-12 rounded-full bg-white border border-[#E2E5E8] flex items-center justify-center mx-auto text-[#0F2430] font-extrabold text-sm mb-4 group-hover:bg-[#0F2430] group-hover:text-white transition-all duration-300">
-                  {lead.name.split(" ").map(n => n[0]).join("")}
-                </div>
-                <h4 className="text-sm font-bold text-[#0F2430] group-hover:text-[#3E5868] transition-colors">{lead.name}</h4>
-                <p className="text-[11px] text-[#3E5868] mt-1">{lead.role}</p>
-                <div className="h-px bg-[#E2E5E8] my-3" />
-                <span className="text-[9px] uppercase tracking-wider font-bold text-[#3E5868]">{lead.dept}</span>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
+   
       <section className="py-20 bg-[#F4F4F4] border-t border-[#E2E5E8]/50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

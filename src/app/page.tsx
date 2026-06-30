@@ -99,7 +99,7 @@ const storyCards = [
   {
     src: '/images/chemicals.jpg',
     label: 'Chemicals & Pharma',
-    sublabel: 'Precision Biosynthesis',
+    sublabel: 'Precision in formulation manufacturing',
     accent: '#50D0DE',
     position: 'top-[46%] left-[3%]',
     finalRotation: -6,
@@ -137,14 +137,14 @@ const immersiveVerticals = [
   { id: "vertical-engineering", tagline: "Engineering & Construction", title: "Infrastructure of Tomorrow", description: "Cranes, steel, and digital twins — our EPC division delivers turn-key industrial plants, smart cities, and transport corridors worldwide.", image: "/images/engineering.jpg", video: "/videos/engineering.mp4", accent: "#FFA94D", icon: <Hammer className="w-5 h-5" />, align: "right" as const },
   { id: "vertical-energy", tagline: "Renewable Energy", title: "Powering a Cleaner Grid", description: "Utility-scale solar fields and onshore wind farms — every gigawatt deployed displaces hundreds of thousands of tons of CO₂ a year.", image: "/images/energy.jpg", video: "/videos/energy.mp4", accent: "#168F5D", icon: <Zap className="w-5 h-5" />, align: "left" as const },
   { id: "vertical-chemicals", tagline: "Chemicals & Pharma", title: "Precision Biosynthesis", description: "FDA-aligned cleanrooms manufacture active pharmaceutical ingredients and green solvents with batch-level traceability.", image: "/images/chemicals.jpg", video: "/videos/chemicals.mp4", accent: "#50D0DE", icon: <Layers className="w-5 h-5" />, align: "right" as const },
-  { id: "vertical-trade", tagline: "International Trade", title: "Connecting Global Markets", description: "A 24/7 trading desk spanning London, Dubai, and Singapore — brokering commodities, trade finance, and vessel chartering at scale.", image: "/images/trade.jpg", video: "/videos/trade.mp4", accent: "#9D6FFF", icon: <Globe className="w-5 h-5" />, align: "left" as const },
+  { id: "vertical-trade", tagline: "International Trade", title: "Connecting Global Markets", description: "A 24/7 trading desk.", image: "/images/trade.jpg", video: "/videos/trade.mp4", accent: "#9D6FFF", icon: <Globe className="w-5 h-5" />, align: "left" as const },
 ];
 
 const stats = [
   { value: "40+", label: "Years of Trust & Excellence" },
-  { value: "15+", label: "Global Trading Hubs" },
-  { value: "$12B+", label: "Consolidated Annual Revenue" },
-  { value: "15,000+", label: "Talented Partners & Associates" },
+  { value: "15+", label: "Global Trading Hubs and Pharmaceuticals Formulations" },
+  { value: "$10B+", label: "Consolidated Annual Revenue" },
+  { value: "13,000+", label: "Talented Partners & Associates" },
 ];
 
 const tickerItems = [
@@ -159,32 +159,29 @@ const tickerItems = [
 ];
 
 const keyLeaders = [
-  { name: "Dr. Vikram Seth", role: "Group Executive Chairman", quote: "Excellence is not a singular act, but a habit of continuous ethical development and global innovation." },
-  { name: "Helena Rostova", role: "Chief Executive Officer (CEO)", quote: "Our target for 2026 and beyond is zero carbon operations across all extraction and trade logistics." },
+  { name: "Gunendra Mehta", role: "Group Executive Chairman", quote: "Excellence is not a singular act, but a habit of continuous ethical development and global innovation." },
+  { name: "Romi Mehta", role: "Chief Executive Officer (CEO)", quote: "You are born to excel and dare to care" },
 ];
 
 interface Hub { id: string; name: string; coords: [number, number]; role: string; details: string; impact: string; }
 
 const globalHubs: Hub[] = [
-  { id: "johannesburg", name: "Johannesburg", coords: [-26.2, 28.05], role: "Minerals Extraction & Operations Base", details: "Mining asset operations, refinery coordination, and CSR compliance.", impact: "Over 8,500 local workers engaged in ethical mining operations." },
-  { id: "london", name: "London", coords: [51.51, -0.13], role: "Global Corporate HQ & Financial Hub", details: "Executive leadership, finance, and investment operations.", impact: "Directs £12B+ global asset portfolio." },
-  { id: "newyork", name: "New York", coords: [40.71, -74.01], role: "International Trade & Investment Relations", details: "Corporate relations, hedge-fund & commodity trade negotiations.", impact: "Managing $4B in annual export transactions." },
-  { id: "dubai", name: "Dubai", coords: [25.2, 55.27], role: "Commodities & Logistics Control Center", details: "Central hub for mineral trading, shipping logistics, and brokerage.", impact: "Controls 35% of Middle East/Africa mineral exports." },
-  { id: "singapore", name: "Singapore", coords: [1.36, 103.99], role: "Asia-Pacific Arbitrage & Chemicals Trade", details: "Regional chemical logistics, trade finance, and technology scaling.", impact: "Servicing 14 key East-Asian manufacturing clients." },
-  { id: "perth", name: "Perth", coords: [-31.95, 115.86], role: "Australian Operations & Energy Development", details: "Renewable energy joint ventures, heavy minerals, and technical audits.", impact: "1.2GW clean energy infrastructure projects underway." },
-  { id: "santiago", name: "Santiago", coords: [-33.45, -70.65], role: "South America Lithium Operations", details: "Lithium brine extraction, initial refining, and export shipping.", impact: "Supplying 20% of European battery-grade lithium." },
+  { id: "dcr", name: "DCR", coords: [-4.32, 15.32], role: "Minerals Extraction & Operations Base", details: "Mining asset operations, refinery coordination, and CSR compliance.", impact: "Over 8,500 local workers engaged in ethical mining operations." },
+  { id: "london", name: "London", coords: [51.51, -0.13], role: "Global Corporate HQ & Financial Hub", details: "Executive leadership, finance, and investment operations.", impact: "Directs £5B+ global asset portfolio." },
+  { id: "newyork", name: "New York", coords: [40.71, -74.01], role: "International Trade & Investment Relations", details: "Corporate relations, hedge-fund & commodity trade negotiations.", impact: "Managing $4B in annual trade transactions." },
+  { id: "dubai", name: "Dubai", coords: [25.2, 55.27], role: "Commodities & Logistics Control Center", details: "Central hub for mineral trading, shipping logistics, and brokerage.", impact: "Controls 9% of Middle East/Africa mineral exports." },
+  { id: "singapore", name: "Singapore", coords: [1.36, 103.99], role: "Asia-Pacific Arbitrage & Chemicals Trade", details: "Regional chemical logistics, trade finance, and technology scaling.", impact: "Servicing key East-Asian manufacturing clients." },
+  { id: "perth", name: "Perth", coords: [-31.95, 115.86], role: "Australian Operations & Energy Development", details: "Renewable energy joint ventures, heavy minerals, and technical audits.", impact: "300MW clean energy infrastructure projects underway." },
+  { id: "santiago", name: "Santiago", coords: [-33.45, -70.65], role: "South America Lithium Operations", details: "Lithium brine extraction, initial refining, and export shipping.", impact: "Supplying 80% of European battery-grade lithium." },
+  { id: "india", name: "India", coords: [20.59, 78.96], role: "Semiconductor & Mining Equipment Sourcing", details: "Strategic sourcing of semiconductors and heavy mining equipment from India's growing industrial manufacturing base.", impact: "Partnering with 30+ Indian OEMs for precision mining and tech components." },
+  { id: "china", name: "China", coords: [35.86, 104.19], role: "EPC, Solar & Renewable Energy Sourcing", details: "Sourcing of mining equipment, EPC players, solar panels, and renewable energy components at scale.", impact: "Channelling $2B+ in annual renewable and industrial equipment procurement." },
 ];
 
 const testimonials = [
-  { quote: "Wellness Group has been our mineral trade partner for over a decade. Their commitment to supply-chain visibility, prompt delivery, and ethical lithium sourcing makes them an indispensable asset to our EV manufacturing.", author: "Dieter Müller", company: "Automotive Solutions Europe" },
-  { quote: "The EPC Engineering wing delivered our solar storage terminal on time and under budget. Their technical acumen and integration of smart grids are industry-leading.", author: "Eng. Aisha Al-Mansoori", company: "Gulf Clean Energy Authority" },
+  { quote: "Wellness Group has been our mineral trade partner for over a 3 decades. Their commitment to supply-chain visibility, prompt delivery, and ethical lithium sourcing makes them an indispensable asset to our Business.", author: "Edwin Muommenam", company: "EDIC chemicals & Allide Distributions CMD" },
+  { quote: "Wellness Group has been our mineral trade partner for over a 3 decades. Their commitment to supply-chain visibility, prompt delivery, and ethical lithium sourcing makes them an indispensable asset to our Business.", author: "Richard Mclligatte", company: "CMD" },
 ];
 
-const newsArticles = [
-  { date: "June 12, 2026", category: "Minerals & Resources", title: "Wellness Group secures 25-year Lithium extraction concessions in South America", summary: "New concession guarantees lithium supply to service over 1.2 million electric vehicles annually, using low-water brine evaporation techniques." },
-  { date: "May 28, 2026", category: "Renewable Energy", title: "EPC Division signs contract for 800MW hybrid wind-solar grid in Western Australia", summary: "The project will feature integrated lithium battery backups and supply clean power to industrial mining facilities in the Pilbara." },
-  { date: "May 10, 2026", category: "Corporate Social Responsibility", title: "Wellness Group achieves EcoVadis Platinum CSR rating for ethical supply chain", summary: "Recognized in the top 1% of international trading conglomerates for child-labor-free mining processes and carbon auditing." },
-];
 
 export default function Home() {
   // ── Refs ──────────────────────────────────────────────────────────────────
@@ -292,148 +289,33 @@ export default function Home() {
       ──────────────────────────────────────────────────────────────────────── */}
       {/* Outer section is min-h-screen on mobile (story cards are hidden anyway)
           and 450vh on lg+ to provide the scroll runway for the image cards.    */}
-      <section ref={heroSectionRef} id="hero-section" className="relative min-h-screen lg:min-h-[450vh]">
-        <div
-          ref={heroInnerRef}
-          className="sticky top-0 h-screen overflow-hidden bg-[#070E14] flex items-center justify-center"
-          onMouseMove={handleHeroMouseMove}
-        >
-          {/* Aurora orbs — large blurs are GPU-intensive; show simplified versions on mobile */}
-          {/* Mobile: two small, low-blur orbs */}
-          <div className="hero-orb lg:hidden absolute top-[18%] left-[-5%] w-[220px] h-[220px] bg-[#168F5D]/14 rounded-full blur-[60px] pointer-events-none" />
-          <div className="hero-orb lg:hidden absolute bottom-[15%] right-[-5%] w-[200px] h-[200px] bg-[#3E5868]/14 rounded-full blur-[50px] pointer-events-none" />
-          {/* Desktop: large cinematic blurs */}
-          <div className="hero-orb hidden lg:block absolute top-[22%] left-[14%]  w-[560px] h-[560px] bg-[#168F5D]/16 rounded-full blur-[160px] pointer-events-none" />
-          <div className="hero-orb hidden lg:block absolute bottom-[20%] right-[12%] w-[460px] h-[460px] bg-[#3E5868]/18 rounded-full blur-[140px] pointer-events-none" />
-          <div className="hero-orb hidden lg:block absolute top-[55%] left-[35%]  w-[320px] h-[320px] bg-[#FFA94D]/11 rounded-full blur-[110px] pointer-events-none" />
-          <div className="hero-orb hidden lg:block absolute top-[28%] right-[28%] w-[260px] h-[260px] bg-[#9D6FFF]/9  rounded-full blur-[90px]  pointer-events-none" />
+      <section ref={heroSectionRef} id="hero-section" className="relative min-h-screen flex items-center justify-center py-20 overflow-hidden">
+        {/* Pyramid background */}
+        <Image
+          src="/pyramid.jpeg"
+          alt="Pyramid"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Subtle overlay so text remains readable */}
+        <div className="absolute inset-0 bg-black/35" />
 
-          {/* Dot grid */}
-          <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.055)_1px,transparent_1px)] bg-[size:36px_36px] pointer-events-none" />
-
-          {/* Cursor spotlight */}
-          <div
-            ref={spotlightRef}
-            className="absolute pointer-events-none rounded-full -translate-x-1/2 -translate-y-1/2 opacity-0"
-            style={{ width: 520, height: 520, background: 'radial-gradient(circle, rgba(22,143,93,0.11) 0%, transparent 68%)' }}
-          />
-
-          {/* ── Story image cards (desktop only) ─────────────────────────────
-              Positioned absolutely around the central text block.
-              GSAP animates each in from offscreen during its scroll range.
-          ─────────────────────────────────────────────────────────────────── */}
-          {storyCards.map((card, i) => (
-            <div
-              key={card.label}
-              ref={el => { imgRefs.current[i] = el; }}
-              className={`absolute hidden lg:block will-change-transform ${card.position}`}
-              style={{ zIndex: 5 }}
-            >
-              <div className="w-[230px] overflow-hidden rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.65)] ring-1 ring-white/10">
-                <div className="relative aspect-[4/3]">
-                  <Image src={card.src} alt={card.label} fill sizes="230px" priority={i === 0} className="object-cover" />
-                  {/* Inner gradient so the label bar reads cleanly */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-                </div>
-                {/* Label bar */}
-                <div className="px-3 py-2 bg-[#080E15]/95 backdrop-blur-sm border-t border-white/[0.06]">
-                  <p className="text-[9px] font-bold uppercase tracking-[0.18em] leading-tight" style={{ color: card.accent }}>
-                    {card.label}
-                  </p>
-                  <p className="text-[8px] text-white/65 mt-0.5 font-medium tracking-wide">{card.sublabel}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-
-          {/* ── Central text block ────────────────────────────────────────── */}
-          <div className="relative z-10 max-w-2xl mx-auto px-6 text-center flex flex-col items-center pt-20">
-            <div className="h-14 sm:h-20" aria-hidden="true" />
-
-            {/* Stat badges */}
-            <div className="flex flex-wrap gap-2 justify-center mb-8">
-              {heroBadges.map((b, i) => (
-                <div key={i} className="hero-badge flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.06] backdrop-blur-sm">
-                  <span className="text-xs font-bold text-white">{b.value}</span>
-                  <span className="w-px h-3 bg-white/20" />
-                  <span className="text-[10px] uppercase tracking-wider text-white/70 font-semibold">{b.label}</span>
-                </div>
-              ))}
-            </div>
-
-            <span className="hero-kicker text-xs sm:text-sm font-bold uppercase tracking-[0.3em] text-[#ADE6A5] mb-5 block">
-              A Global Conglomerate of Excellence
+        <div ref={heroInnerRef} className="relative z-10 max-w-2xl mx-auto px-6 text-center flex flex-col items-center">
+          <h1 className="hero-title text-5xl sm:text-7xl md:text-[86px] font-extrabold tracking-tighter text-white mb-7 max-w-3xl leading-[0.92]">
+            <span ref={scrambleRef1}>Born to </span>
+            <span ref={scrambleRef2} className="text-transparent bg-clip-text bg-gradient-to-r from-[#168F5D] via-[#ADE6A5] to-[#168F5D]">
+              Excel
             </span>
+          </h1>
 
-            <h1 className="hero-title text-5xl sm:text-7xl md:text-[86px] font-extrabold tracking-tighter text-white mb-7 max-w-3xl leading-[0.92]">
-              <span ref={scrambleRef1}>Born to </span>
-              <span ref={scrambleRef2} className="text-transparent bg-clip-text bg-gradient-to-r from-[#168F5D] via-[#ADE6A5] to-[#168F5D]">
-                Excel
-              </span>
-            </h1>
-
-            <p className="hero-copy text-sm sm:text-base text-white/80 max-w-xl leading-relaxed mb-9">
-              Pioneering ethical Minerals Export, smart Engineering, sustainable Energy,
-              bio-pharmaceutical solutions, and agile International Trade — across 15 global hubs.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <Link
-                ref={btn1Ref}
-                href="/businesses"
-                onMouseMove={e => magneticMove(e, btn1Ref.current)}
-                onMouseLeave={() => magneticLeave(btn1Ref.current)}
-                className="hero-cta will-change-transform w-full sm:w-auto px-8 py-4 bg-white text-[#0F2430] rounded-full text-sm font-bold uppercase tracking-wider shadow-lg shadow-black/40 hover:bg-[#ADE6A5] transition-colors duration-300 flex items-center justify-center gap-2 group"
-              >
-                <span>Our Divisions</span>
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-              <Link
-                ref={btn2Ref}
-                href="/about"
-                onMouseMove={e => magneticMove(e, btn2Ref.current)}
-                onMouseLeave={() => magneticLeave(btn2Ref.current)}
-                className="hero-cta will-change-transform w-full sm:w-auto px-8 py-4 bg-white/10 border border-white/25 hover:bg-white/20 rounded-full text-sm font-bold uppercase tracking-wider text-white transition-colors duration-300"
-              >
-                Corporate Heritage
-              </Link>
-            </div>
-
-            {/* Scroll hint */}
-            <div className="mt-14 hidden md:flex flex-col items-center gap-2 opacity-75">
-              <span className="text-[10px] uppercase tracking-widest text-white/75">Scroll to discover our divisions</span>
-              <div className="w-6 h-10 rounded-full border border-white/22 flex items-start justify-center p-1.5">
-                <div className="w-1.5 h-2.5 bg-[#ADE6A5] rounded-full animate-bounce" />
-              </div>
-            </div>
-          </div>
-
-          {/* Scroll progress bar — desktop only, fills as story cards appear */}
-          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/[0.05] z-20 hidden lg:block">
-            <div
-              ref={progressRef}
-              className="h-full bg-gradient-to-r from-[#168F5D] via-[#ADE6A5] to-[#9D6FFF]"
-              style={{ transform: 'scaleX(0)', transformOrigin: 'left center' }}
-            />
-          </div>
-
-          {/* Bottom fade into ticker strip */}
-          <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#0F2430] to-transparent pointer-events-none" />
+          <p className="hero-copy text-sm sm:text-base text-white/80 max-w-xl leading-relaxed">
+            Pioneering ethical Minerals Export, smart Engineering, sustainable Energy,
+            Pharmaceutical formulation, manufacturing and export International trade of innovation and creative, technological products across 40 countries
+          </p>
         </div>
       </section>
 
-      {/* ── Credibility Ticker ───────────────────────────────────────────────── */}
-      <div className="overflow-hidden bg-[#0F2430] border-y border-white/[0.06] py-3 select-none">
-        <div className="animate-marquee flex whitespace-nowrap w-max">
-          {[...tickerItems, ...tickerItems].map((item, i) => (
-            <span key={i} className="inline-flex items-center gap-2 px-8 text-xs font-semibold uppercase tracking-widest">
-              <span className="text-white">{item.value}</span>
-              <span className="text-white/65">{item.label}</span>
-              <span className="ml-2 text-white/30 text-base leading-none">·</span>
-            </span>
-          ))}
-        </div>
-      </div>
 
       {/* ── About ────────────────────────────────────────────────────────────── */}
       <section className="py-24 sm:py-32 bg-white relative overflow-hidden">
@@ -451,8 +333,8 @@ export default function Home() {
               <AnimatedSection direction="left">
                 <span className="text-xs font-bold uppercase tracking-widest text-[#3E5868]">Our Corporate Creed</span>
                 <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0F2430] mt-2 mb-4">Born to Excel. Driven to Sustain.</h2>
-                <p className="text-[#1f2d3d] leading-relaxed mb-4 text-sm sm:text-base">Established with a vision to build a balanced, resilient enterprise, Wellness Group operates at the convergence of vital industries. We trade in the core minerals fueling the global energy transition, engineer large-scale urban infrastructure, deploy clean gigawatt solar arrays, and synthesise crucial chemical APIs.</p>
-                <p className="text-[#1f2d3d] leading-relaxed mb-6 text-sm sm:text-base">Our operations bridge critical trade channels across the UK, Europe, the Middle East, Africa, and Asia — anchored by a deep ethical code that guarantees child-labor-free mining, fully auditable cargo routes, and carbon-offset logistics.</p>
+                <p className="text-[#1f2d3d] leading-relaxed mb-4 text-sm sm:text-base">Established with a vision to build a balanced, resilient enterprise, Wellness Group operates at the convergence of vital industries. We trade in the core minerals fueling the global energy transition, engineer large-scale urban infrastructure, deploy clean gigawatt solar arrays, and synthesise crucial chemical APIs and pharmaceuticals formulation.</p>
+                <p className="text-[#1f2d3d] leading-relaxed mb-6 text-sm sm:text-base">Our operations bridge critical trade channels across the  Europe, the Middle East, Africa, Asia and Americas — anchored by a deep ethical code that guarantees child-labor-free mining, fully auditable cargo routes, and carbon-offset logistics.</p>
                 <div className="grid grid-cols-2 gap-5 mt-8">
                   {stats.map((stat, idx) => (
                     <div key={idx} className="p-5 rounded-xl bg-[#F4F4F4] border border-[#E2E5E8]">
@@ -545,21 +427,25 @@ export default function Home() {
                   <div className="w-full max-w-md mx-auto">
                     <CobeGlobe
                       markers={[
-                        { id: "johannesburg", location: [-26.2, 28.05],  label: "Johannesburg" },
-                        { id: "london",       location: [51.51, -0.13],  label: "London"       },
-                        { id: "newyork",      location: [40.71, -74.01], label: "New York"     },
-                        { id: "dubai",        location: [25.2,  55.27],  label: "Dubai"        },
-                        { id: "singapore",    location: [1.36,  103.99], label: "Singapore"    },
-                        { id: "perth",        location: [-31.95, 115.86],label: "Perth"        },
-                        { id: "santiago",     location: [-33.45, -70.65],label: "Santiago"     },
+                        { id: "dcr",          location: [-4.32,  15.32],  label: "DCR"        },
+                        { id: "london",       location: [51.51,  -0.13],  label: "London"     },
+                        { id: "newyork",      location: [40.71, -74.01],  label: "New York"   },
+                        { id: "dubai",        location: [25.2,   55.27],  label: "Dubai"      },
+                        { id: "singapore",    location: [1.36,  103.99],  label: "Singapore"  },
+                        { id: "perth",        location: [-31.95, 115.86], label: "Perth"      },
+                        { id: "santiago",     location: [-33.45, -70.65], label: "Santiago"   },
+                        { id: "india",        location: [20.59,  78.96],  label: "India"      },
+                        { id: "china",        location: [35.86, 104.19],  label: "China"      },
                       ]}
                       activeMarkerId={activeHub.id}
                       arcs={[
-                        { id: "jnb-london",      from: [-26.2,  28.05], to: [51.51, -0.13],   label: "Extraction → HQ" },
-                        { id: "santiago-dubai",  from: [-33.45,-70.65], to: [25.2,  55.27],   label: "Lithium Trade"   },
-                        { id: "dubai-singapore", from: [25.2,  55.27],  to: [1.36,  103.99],  label: "Asia-Pacific"    },
-                        { id: "newyork-london",  from: [40.71, -74.01], to: [51.51, -0.13],   label: "Trade Finance"   },
-                        { id: "singapore-perth", from: [1.36,  103.99], to: [-31.95, 115.86], label: "Aussie Energy"   },
+                        { id: "dcr-london",      from: [-4.32,   15.32], to: [51.51,  -0.13],  label: "Extraction → HQ"  },
+                        { id: "santiago-dubai",  from: [-33.45, -70.65], to: [25.2,   55.27],  label: "Lithium Trade"    },
+                        { id: "dubai-singapore", from: [25.2,   55.27],  to: [1.36,  103.99],  label: "Asia-Pacific"     },
+                        { id: "newyork-london",  from: [40.71, -74.01],  to: [51.51,  -0.13],  label: "Trade Finance"    },
+                        { id: "singapore-perth", from: [1.36,  103.99],  to: [-31.95, 115.86], label: "Aussie Energy"    },
+                        { id: "china-india",     from: [35.86, 104.19],  to: [20.59,  78.96],  label: "Equipment Supply" },
+                        { id: "china-dubai",     from: [35.86, 104.19],  to: [25.2,   55.27],  label: "Solar Trade"      },
                       ]}
                       markerColor={[0.0863, 0.5608, 0.3647]}
                       baseColor={[0.95, 0.95, 0.95]}
@@ -653,27 +539,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Newsroom ─────────────────────────────────────────────────────────── */}
-      <section className="py-24 bg-[#F4F4F4] border-t border-[#E2E5E8]/50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-16 gap-4">
-            <AnimatedSection direction="right"><span className="text-xs font-bold uppercase tracking-widest text-[#3E5868]">Corporate Media</span><h2 className="text-3xl font-bold tracking-tight text-[#0F2430] mt-1">Newsroom & Resource Center</h2></AnimatedSection>
-            <AnimatedSection direction="left"><Link href="/news" className="text-xs font-bold uppercase tracking-wider text-[#3E5868] hover:text-[#0F2430] flex items-center gap-1 group"><span>Browse All Articles</span><ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" /></Link></AnimatedSection>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {newsArticles.map((article, idx) => (
-              <AnimatedSection key={idx} direction="up" delay={idx * 0.1} className="flex flex-col justify-between bg-white p-6 rounded-2xl border border-[#E2E5E8] hover:shadow-lg hover:shadow-[#0F2430]/5 transition-all group h-full">
-                <div>
-                  <div className="flex items-center justify-between text-[10px] uppercase font-bold text-[#3E5868] mb-4"><span>{article.category}</span><span>{article.date}</span></div>
-                  <h4 className="text-base font-bold text-[#0F2430] group-hover:text-[#3E5868] transition-colors mb-3 leading-snug">{article.title}</h4>
-                  <p className="text-xs text-[#1f2d3d] leading-relaxed mb-6">{article.summary}</p>
-                </div>
-                <Link href={`/news/${idx}`} className="text-xs font-bold uppercase tracking-wider text-[#0F2430] hover:text-[#3E5868] flex items-center gap-1 group/btn"><span>Read Article</span><ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5" /></Link>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── CTA ──────────────────────────────────────────────────────────────── */}
       <section id="cta-section" className="py-24 sm:py-32 bg-[#F5F5F5] relative overflow-hidden border-t border-[#E2E5E8]">

@@ -62,7 +62,7 @@ const businesses = [
     desc: "Global commodity brokerage, trade finance, and hedging — mitigating market volatility through active arbitrage across major exchanges.",
     icon: <Globe className="w-7 h-7 text-[#0F2430]" />,
     keyAssets: ["LME-grade metals hedging & brokerage", "Bulk shipping vessel chartering & tracking", "Letters of credit & trade finance syndication", "In-transit cargo insurance and risk mitigation"],
-    operations: "24/7 trading desk in London, Dubai, and Singapore; direct partnerships with container carriers.",
+    operations: "24/7 trading desk",
     esgNote: "All trades verified through AML audits and adhere to international compliance sanctions.",
   },
 ];
