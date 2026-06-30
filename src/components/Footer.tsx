@@ -139,7 +139,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <span className="font-semibold text-[#0F2430] text-xs block">Wellness Group Headquarters</span>
-                  <p className="text-xs mt-0.5 leading-relaxed">DCR,London,New York,Dubai,Singapore,Perth,Santiago,India,China</p>
+                  <p className="text-xs mt-0.5 leading-relaxed">DCR, London, NewYork, Dubai, Singapore, Perth, Santiago, India, China</p>
                 </div>
               </div>
             </div>
