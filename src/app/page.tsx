@@ -289,7 +289,7 @@ export default function Home() {
       ──────────────────────────────────────────────────────────────────────── */}
       {/* Outer section is min-h-screen on mobile (story cards are hidden anyway)
           and 450vh on lg+ to provide the scroll runway for the image cards.    */}
-      <section ref={heroSectionRef} id="hero-section" className="relative min-h-screen flex items-center justify-center py-20 overflow-hidden">
+      <section ref={heroSectionRef} id="hero-section" className="relative min-h-screen overflow-hidden">
         {/* Pyramid background */}
         <Image
           src="/pyramid.jpeg"
@@ -299,23 +299,28 @@ export default function Home() {
           priority
         />
         {/* Subtle overlay so text remains readable */}
-        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-black/10" />
 
-        <div ref={heroInnerRef} className="relative z-10 max-w-2xl mx-auto px-6 text-center flex flex-col items-center">
-          <h1 className="hero-title text-5xl sm:text-7xl md:text-[86px] font-extrabold tracking-tighter text-white mb-7 max-w-3xl leading-[0.92]">
+        {/* Born to Excel — top of pyramid */}
+        <div ref={heroInnerRef} className="absolute top-24 inset-x-0 z-10 px-10 text-center">
+          <h1
+            className="hero-title font-century-gothic text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter text-white max-w-3xl leading-tight mx-auto italic"
+          >
             <span ref={scrambleRef1}>Born to </span>
             <span ref={scrambleRef2} className="text-transparent bg-clip-text bg-gradient-to-r from-[#168F5D] via-[#ADE6A5] to-[#168F5D]">
               Excel
             </span>
           </h1>
+        </div>
 
-          <p className="hero-copy text-sm sm:text-base text-white/80 max-w-xl leading-relaxed">
+        {/* Description — bottom of pyramid image */}
+        <div className="absolute bottom-1 inset-x-0 z-10 px-6 text-center">
+          <p className="hero-copy text-lg sm:text-xl md:text-2xl text-white max-w-4xl leading-relaxed mx-auto font-medium">
             Pioneering ethical Minerals Export, smart Engineering, sustainable Energy,
             Pharmaceutical formulation, manufacturing and export International trade of innovation and creative, technological products across 40 countries
           </p>
         </div>
       </section>
-
 
       {/* ── About ────────────────────────────────────────────────────────────── */}
       <section className="py-24 sm:py-32 bg-white relative overflow-hidden">

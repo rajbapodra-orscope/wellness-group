@@ -17,10 +17,26 @@ export default function Contact() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    setTimeout(() => { setSubmitting(false); setSubmitted(true); setForm({ name: "", email: "", company: "", department: "Minerals & Trade", message: "" }); }, 1200);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Submission failed");
+      setSubmitted(true);
+      setForm({ name: "", email: "", company: "", department: "Minerals & Trade", message: "" });
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputClass = "w-full bg-[#F4F4F4] border border-[#E2E5E8] rounded-xl px-4 py-3 text-sm text-[#0F2430] focus:outline-none focus:border-[#0F2430] transition-colors placeholder:text-[#3E5868]/50";
@@ -108,6 +124,7 @@ export default function Contact() {
                         className={inputClass} />
                     </div>
 
+                    {error && <p className="text-xs text-red-500 font-medium">{error}</p>}
                     <button type="submit" disabled={submitting}
                       className="w-full py-4 bg-[#0F2430] hover:bg-[#081720] text-white rounded-xl font-bold uppercase tracking-wider text-xs transition-all flex items-center justify-center gap-2 disabled:opacity-50 shadow-sm shadow-[#0F2430]/30">
                       {submitting ? <span>Validating...</span> : <><Send className="w-4 h-4" /><span>Submit Formal Inquiry</span></>}
