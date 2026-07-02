@@ -32,7 +32,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: "1985", title: "Foundation", desc: "Established as a regional mineral brokerage firm in London, UK." },
+  { year: "1988", title: "Foundation", desc: "Established as a regional mineral brokerage firm in London, UK." },
   { year: "1998", title: "EPC Engineering Expansion", desc: "Acquired a leading industrial building firm to offer complete engineering solutions." },
   { year: "2010", title: "Renewable Energy Transition", desc: "Launched a solar division, installing 500MW of grid infrastructure across Europe." },
   { year: "2018", title: "Bio-Chemical & Pharma Division", desc: "Commissioned FDA-certified active pharmaceutical ingredient labs." },

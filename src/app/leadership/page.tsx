@@ -9,12 +9,12 @@ import { Scale, ShieldAlert, Award } from "lucide-react";
 import ParallaxImage from "@/components/ui/ParallaxImage";
 
 const board = [
-  { name: "Gunendra Mehta", role: "Group Executive Chairman", credentials: "Ph.D. in Resource Economics, Oxford University", bio: "Dr. Seth has overseen global commodity transactions for over 30 years. Formerly a senior advisor to international energy commissions, he steers the Group's long-term asset allocations." },
-  { name: "Romi Mehta", role: "Chief Executive Officer (CEO)", credentials: "M.S. Chemical Engineering, MIT; MBA, Harvard", bio: "Helena directs all operating divisions of Wellness Group and spearheaded our pivot to battery-grade lithium refining." },
-  { name: "Aditya Pandya", role: "VP of Sourcing", bio: "Sir Alistair chairs the Compliance and Ethics Board, ensuring supply chain audits and ESG frameworks exceed LME and international standards." },
-  { name: "Lokadi Bin Russele", role: "Chief Financial Officer (CFO)", credentials: "Former Managing Director, Global Trade Finance, HSBC", bio: "Marcus supervises group risk, accounting, and capital structure, managing our arbitrage desks and international trade lines." },
-  { name: "Parmannand Nehe ", role: "Chief Technology Officer (CTO)", credentials: "Former Managing Director, Global Trade Finance, HSBC", bio: "Marcus supervises group risk, accounting, and capital structure, managing our arbitrage desks and international trade lines." },
-  { name: "Manish Sharma ", role: "Global Coordinator", credentials: "Former Managing Director, Global Trade Finance, HSBC", bio: "Marcus supervises group risk, accounting, and capital structure, managing our arbitrage desks and international trade lines." },
+  { name: "Gunendra Mehta", role: "Group Executive Chairman", bio: "Gunendra has overseen global commodity transactions for over 30 years. Formerly a senior advisor to international energy commissions, he steers the Group's long-term asset allocations." },
+  { name: "Romi Mehta", role: "Chief Executive Officer (CEO)", bio: "Romi directs all operating divisions of Wellness Group and spearheaded our pivot to battery-grade lithium refining." },
+  { name: "Aditya Pandya", role: "VP of Sourcing", bio: "Aditya leads global raw-material sourcing and supplier relationships, qualifying and auditing vendors across minerals, chemicals, and trade verticals to keep procurement ethical and cost-efficient." },
+  { name: "Lokadi Bin Russele", role: "Chief Technology Officer (CTO) overseas", credentials: "20+ years leading enterprise technology across global trading and logistics operations", bio: "Lokadi sets technology strategy for the Group's overseas operations, overseeing digital infrastructure, cybersecurity, and systems integration across our international trading desks and logistics hubs." },
+  { name: "Parmannand Nehe ", role: "Chief Technology Officer (CTO) India", credentials: "20+ years in enterprise IT and industrial digitalization across Indian manufacturing operations", bio: "Parmannand leads technology strategy for India operations, modernizing plant automation, ERP systems, and data infrastructure across the Group's domestic manufacturing and trading units." },
+  { name: "Manish Sharma ", role: "Global Coordinator", credentials: "10+ years coordinating multi-region operations and stakeholder engagement", bio: "Manish coordinates operations and communications across the Group's global business units, aligning regional teams, timelines, and reporting to keep multi-country projects on track." },
 ];
 
 const committee = [

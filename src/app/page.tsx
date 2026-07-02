@@ -292,8 +292,8 @@ export default function Home() {
       <section ref={heroSectionRef} id="hero-section" className="relative min-h-screen overflow-hidden">
         {/* Pyramid background */}
         <Image
-          src="/pyramid.jpeg"
-          alt="Pyramid"
+          src="/global-night.jpg"
+          alt="Earth at night showing global city lights across continents"
           fill
           className="object-cover"
           priority
